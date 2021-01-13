@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Grandstander", cursive;
+}
+
+body {
+  background: #c8ad55;
+  margin: 30px 50px;
+  line-height: 1.4;
+}
+
+.btn {
+  background: #d0fcb3;
+  color: #619c64;
+  font-size: 1.5rem;
+  padding: 0.8rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.logo h1 {
+  font-size: 5rem;
+  color: #9bc59d;
+  text-align: center;
+}
+
+.nav ul {
+  display: grid;
+  grid-gap: 20px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.nav a {
+  background: green;
+  display: block;
+  text-decoration: none;
+  padding: 0.9rem;
+  text-align: center;
+  color: orange;
+  text-transform: upperase;
+  font-size: 1.1rem;
+  box-shadow: red;
+}
+
+.nav a:hover {
+  background: turquoise;
+  color: red;
+}
+
+.container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "showcase showcase showcase showbox"
+    "showcase showcase showcase showbox";
+}
+
+
+.showcase {
+  grid-area: showcase;
+  min-height: 400px;
+  background: url(ws_Street_Cafe_1920x1080.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  box-shadow: darkslategray;
+}
+
+.showcase h1 {
+  font-size: 6rem;
+  margin-bottom: 0;
+  color: red;
+}
+
+.showbox {
+  grid-area: showbox;
+  min-height: 400;
+  background-size: cover;
+  background-position: center;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.showbox h3 {
+  font-size: 2rem;
+}
+
+.boxes {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.box {
+  background: green;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  box-shadow: darkslategray;
+}
+
+footer {
+  display: grid;
+  margin-top: rem;
+  background: #6c5a49;
+  color: #271f30;
+  text-align: center;
+  padding: 2.5rem;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+@media (max-width: 700px) {
+  .container {
+    grid-template-areas:
+      "showcase showcase"
+      "showbox showbox";
+  }
+  -showcase h1 {
+    font-size: 2.5rem;
+  }
+  .main-nav ul {
+    grid-template-columns: 1fr;
+  }
+}
